@@ -1,0 +1,21 @@
+@import "global.css";
+@import "header.css";
+@import "menu.css";
+@import "content.css";
+@import "footer.css";
+
+
+.grid_header    { grid-area: header; }
+.grid_main      { grid-area: main; }
+.grid_menu      { grid-area: menu; }
+.grid_footer    { grid-area: footer; }
+
+.main_grid{
+    display: grid;
+    grid-template-columns: repeat(5 fr);
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: 
+        "header header header header header"
+        "menu main main main main"
+        "footer footer footer footer footer";
+}
