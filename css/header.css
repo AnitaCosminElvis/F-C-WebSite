@@ -3,13 +3,11 @@
     justify-content: right;
     height: auto;
     width: 100%;
-
 }
 
 .carousel img {
     background-repeat: no-repeat;
-    border: 1.5px solid transparent;
-    border-color: black;
+    border-style: none;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
     -o-transition: opacity 0.5s ease;
@@ -29,24 +27,26 @@
     height: auto;
     width: 100%;
     border-style: none;
+    clip-path:polygon(5% 0,100% 0,95% 50%,100% 100%,5% 100%,0 50%);
 }
 
 #id_btn_right{
     height: auto;
     width: 100%;
     border-style: none;
+    clip-path:polygon(0 0,95% 0,100% 50%,95% 100%,0 100%,5% 50%);
 }
 
 .carousel_grid{
     display: grid;
-    grid-template-columns: 1% repeat(22, 1fr) 1%;
+    grid-template-columns: 5% repeat(22, 1fr) 5%;
     grid-template-rows: repeat(9, min-content);
     
 }
 
 .grid_btn_left {
     opacity: .7;
-    grid-column: 1/6;
+    grid-column: 1/8;
     grid-row: 8;
 }
 
@@ -58,7 +58,7 @@
 
 .grid_btn_right { 
     opacity: 0.7;
-    grid-column: 20/25;
+    grid-column: 18/25;
     grid-row: 8;
 }
 
