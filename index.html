@@ -8,14 +8,24 @@
 </head>
 
 <body>
-    <div class="main_grid_view">
-        <header>
-            <figure>
-                <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(35).jpg" alt="Carousel"> 
-            </figure>
+
+
+    <div class="main_grid">
+        <header class="grid_header carousel">
+            <div class="carousel_grid">
+                <figure class="grid_img_center">
+                    <img id="id_img_center" src="/imgs/carousel/1.jpg" alt="Flower">
+                </figure>
+                <figure class="grid_btn_left">
+                    <img id="id_btn_left" src="" alt="Next">
+                </figure>
+                <figure class="grid_btn_right">
+                    <img  id="id_btn_right" src="" alt="Back">
+                </figure>
+            </div>
         </header>
 
-        <div class ="left_frame">
+        <div class ="left_frame grid_menu">
             <menu class="main_menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -25,7 +35,7 @@
             </menu>
         </div>
 
-        <div class ="right_frame">
+        <div class ="right_frame grid_main">
             <main>
                 <p class="main_paragraph">Offendit varias nostrud cernantur, litteris fore dolor ne dolor, fore ullamco ad 
                     pariatur, veniam pariatur o instituendarum. Cupidatat id quorum officia. De esse 
@@ -39,10 +49,11 @@
         </div>
 
 
-        <footer>
+        <footer class="grid_footer">
             <p>2020 Cosmin Elvis Anita</p>
         </footer>
 
         </div>
+   <script src="js/carousel.js"></script>
 </body>
 </html>

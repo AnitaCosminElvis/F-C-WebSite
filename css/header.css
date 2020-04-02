@@ -1,0 +1,71 @@
+.carousel {
+    position: relative;
+    justify-content: right;
+    height: auto;
+    width: 100%;
+
+}
+
+.carousel img {
+    background-repeat: no-repeat;
+    border: 1.5px solid transparent;
+    border-color: black;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.carousel img.transparentEffect {
+    opacity:.3;
+}
+
+#id_img_center{
+    height: auto;
+    width: 100%;
+}
+
+#id_btn_left{
+    height: auto;
+    width: 100%;
+    border-style: none;
+}
+
+#id_btn_right{
+    height: auto;
+    width: 100%;
+    border-style: none;
+}
+
+.carousel_grid{
+    display: grid;
+    grid-template-columns: 1% repeat(22, 1fr) 1%;
+    grid-template-rows: repeat(9, min-content);
+    
+}
+
+.grid_btn_left {
+    opacity: .7;
+    grid-column: 1/6;
+    grid-row: 8;
+}
+
+.grid_img_center  { 
+    opacity: 1;
+    grid-column: 2/24;
+    grid-row: 1/10;
+}
+
+.grid_btn_right { 
+    opacity: 0.7;
+    grid-column: 20/25;
+    grid-row: 8;
+}
+
+.grid_btn_left:hover {
+    opacity: 1;
+}
+
+.grid_btn_right:hover {
+    opacity: 1;
+}
