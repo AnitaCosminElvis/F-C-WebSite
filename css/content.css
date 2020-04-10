@@ -1,3 +1,7 @@
 .main_paragraph {
-    font-size: 16px;
+    max-width: 100%;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    transform: rotate(0.001deg);
 }

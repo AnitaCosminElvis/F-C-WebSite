@@ -1,9 +1,9 @@
 .main_menu{
-    width: 8em;
+    width: 100%;
     height: auto;
     font-size: 1.5em;
-    background-color: #3d7c47;
-    transform: rotate(15deg);
+    background-color: yellow;
+    transform: rotate(25deg);
     clip-path:polygon(0 0,95% 0,100% 50%,95% 100%,0 100%,5% 50%);
     margin-top: 10%;
 }
