@@ -1,9 +1,33 @@
 .main_menu{
-    font-size: 24px;
-    list-style-type:none;
+    width: 8em;
+    height: auto;
+    font-size: 1.5em;
+    background-color: #3d7c47;
+    transform: rotate(15deg);
+    clip-path:polygon(0 0,95% 0,100% 50%,95% 100%,0 100%,5% 50%);
+    margin-top: 10%;
 }
 
 .main_menu ul{
-    font-size: 24px;
-    list-style-type:none;
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    justify-content: space-around;
+    width: auto;
+    height: 100%;
+}
+
+.main_menu a {
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    color: black;
+}
+
+.main_menu a:hover {
+    color: white;
+    font-weight: bolder;
+    background-color: #09868b;
 }
