@@ -12,23 +12,23 @@ body{
 .main_grid{
     display: grid;
     background-color: black;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: 20% repeat(7, 10%) 10%;
+    grid-template-columns: 15% repeat(7, 1fr) 15%;
+    grid-template-rows: 20vh repeat(5, 10vh) 10vh;
 }
 
 .grid_menu { 
-    grid-column: 1/10;
+    grid-column:1/10;
     grid-row: 1;
 }
 
 .grid_background { 
     grid-column: 1/10;
-    grid-row: 2/9; 
+    grid-row: 2/10; 
 }
 
 .grid_main { 
     grid-column: 3/8;
-    grid-row: 4/9; 
+    grid-row: 3/9; 
 }
 
 .grid_footer    { 
