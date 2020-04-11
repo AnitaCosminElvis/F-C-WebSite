@@ -12,27 +12,26 @@ body{
 .main_grid{
     display: grid;
     background-color: black;
-    grid-template-columns: 15% repeat(22, 1fr) 15%;
-    grid-template-rows: repeat(9, fr) 5%;
-    margin: 10% auto;
-}
-
-.grid_header    { 
-    grid-column: 1/25;
-    grid-row: 1/9; 
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 20% repeat(7, 10%) 10%;
 }
 
 .grid_menu { 
-    grid-column: 3/10;
+    grid-column: 1/10;
     grid-row: 1;
 }
 
-.grid_main      { 
-    grid-column: 3/23;
+.grid_background { 
+    grid-column: 1/10;
     grid-row: 2/9; 
 }
 
+.grid_main { 
+    grid-column: 3/8;
+    grid-row: 4/9; 
+}
+
 .grid_footer    { 
-    grid-column: 1/25;
+    grid-column: 1/10;
     grid-row: 10; 
 }
