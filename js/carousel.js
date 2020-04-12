@@ -36,7 +36,7 @@ function prepareCarouselImages(){
         rightBtn.classList.remove('transparentEffect');
         rightBtn.src = "/imgs/carousel/" + imgs[indexR];
 
-    }, 400);
+    }, 300);
 }
 
 leftBtn.addEventListener('click',() => {
