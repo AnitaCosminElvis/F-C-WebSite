@@ -47,10 +47,11 @@
     padding: 0;
 }
 
-.item_3d_cube p{
-    display:flex;
-    display: -ms-flexbox;
-    justify-content: center;
+
+
+.line_base {
+    background-color: yellow;
+    color: black;
     margin: 0;
     padding: 0;
 }
@@ -58,23 +59,17 @@
 .line_top{
     grid-column:4/27;
     grid-row: 1/9;
-    background-color: yellow;
-    color: black;
-    margin: 0;
-    padding: 0;
     transform: skewX(45deg);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
+    opacity: .9;
 }
 
 .line_right{
     grid-column:22/31;
     grid-row: 10/22;
-    background-color: yellow;
-    color: black;
-    margin: 0;
     padding: 1em;
     transform: skewY(45deg);
     text-align: center;
@@ -83,20 +78,14 @@
 .line_bottom{
     grid-column:6/29;
     grid-row: 22/31;
-    background-color: yellow;
-    color: black;
-    margin: 0;
-    padding: 0;
     transform: skewX(45deg);
     text-align: center;
+    opacity: .9;
 }
 
 .line_left{
     grid-column:1/10;
     grid-row: 10/22;
-    background-color: yellow;
-    color: black;
-    margin: 0;
     padding: 1em;
     transform: skewY(45deg);
     text-align: center;
@@ -127,5 +116,9 @@
 .item_3d_cube:hover .line_bottom{
     grid-column:6/27;
     grid-row: 19/28;
+}
 
+.selected{
+    background-color: indianred;
+    color: white;
 }
