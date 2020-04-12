@@ -1,4 +1,27 @@
 footer{
+    display: flex;
+    justify-content: space-between;
     margin-top: 0;
+}
+
+footer p{
+    width: auto;
+    height: auto;
     color: white;
+    text-align: right;
+    margin-right: 17%;
+
+}
+
+.footer_social_media{
+    display: flex;
+    justify-content: space-between;
+    width: 5em;
+    height: auto;
+    margin-left: 17%;
+}
+
+.footer_social_media img{
+    width: 2em;
+    height: auto;
 }
