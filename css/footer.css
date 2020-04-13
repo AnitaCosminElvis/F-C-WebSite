@@ -2,6 +2,9 @@ footer{
     display: flex;
     justify-content: space-between;
     margin-top: 0;
+    border: solid 1px white;
+    margin: 1em 17% 0 17%;
+    padding: 0;
 }
 
 footer p{
@@ -9,19 +12,22 @@ footer p{
     height: auto;
     color: white;
     text-align: right;
-    margin-right: 17%;
-
+    margin:1em;
+    padding: 0;
 }
 
 .footer_social_media{
     display: flex;
-    justify-content: space-between;
-    width: 5em;
-    height: auto;
-    margin-left: 17%;
+    justify-content: space-around;
+    width: 4em;
+    height: 4em;
+    padding: .5em;
+    margin: 0;
 }
 
 .footer_social_media img{
     width: 2em;
     height: auto;
+    margin: 0 0 0 .5em ;
+    padding: 0;
 }

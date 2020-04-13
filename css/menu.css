@@ -3,14 +3,13 @@
     display: -ms-flexbox;
     justify-content: center;
     align-self: center;
-    width: 100vw;
+    width: 99vw;
     height: 100%;
     font-size: 1.5em;
     font-weight: bold;
     background-color: black;
     margin: 0;
     padding: 0;
-
 }
 
 .main_menu ul{

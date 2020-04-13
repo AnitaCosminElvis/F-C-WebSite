@@ -2,6 +2,9 @@
 var leftBtn = document.querySelector('#id_btn_left');
 var rightBtn = document.querySelector('#id_btn_right');
 var centerImg = document.querySelector('#id_img_center');
+var playPauseImgBtn = document.querySelector('#slider_play_id');
+var leftImgBtn = document.querySelector('#slider_left_id');
+var rightImgBtn = document.querySelector('#slider_right_id');
 
 // Store the names of the images
 var imgs = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
@@ -19,6 +22,12 @@ rightBtn.src = "/imgs/carousel/" + imgs[indexR];
 
 //clicks flood check flag
 var hasStartedSwipe = false;
+
+//is carousel paused check flag
+var isCarouselPaused = true;
+
+//global interval
+var interval;
 
 function prepareCarouselImages(){
     
@@ -39,35 +48,50 @@ function prepareCarouselImages(){
     }, 300);
 }
 
-leftBtn.addEventListener('click',() => {
-        
-        if (hasStartedSwipe) return;
-        
-        hasStartedSwipe = true;
-    
-        indexR = indexC;
-        indexC = indexL;
-        indexL = ((indexC <= 0)? end : (indexC - 1));
-        
-        prepareCarouselImages();
-        
-        hasStartedSwipe = false;
-    }
-);
+function pressedLeft(){
+    if (hasStartedSwipe) return;
 
-rightBtn.addEventListener('click',() => {
-        
-        if (hasStartedSwipe) return;
-        
-        hasStartedSwipe = true;
-    
-        indexL = indexC;
-        indexC = indexR;
-        indexR = ((indexC >= end)? 0 : (indexC + 1));
+    hasStartedSwipe = true;
 
-        prepareCarouselImages();
-        
-        hasStartedSwipe = false;
+    indexR = indexC;
+    indexC = indexL;
+    indexL = ((indexC <= 0)? end : (indexC - 1));
 
+    prepareCarouselImages();
+
+    hasStartedSwipe = false;
+}
+
+function pressedRight(){
+    if (hasStartedSwipe) return;
+
+    hasStartedSwipe = true;
+
+    indexL = indexC;
+    indexC = indexR;
+    indexR = ((indexC >= end)? 0 : (indexC + 1));
+
+    prepareCarouselImages();
+
+    hasStartedSwipe = false;
+}
+
+leftBtn.addEventListener('click',() => { pressedLeft(); } );
+rightBtn.addEventListener('click',() => { pressedRight(); } );
+leftImgBtn.addEventListener('click',() => { pressedLeft(); } );
+rightImgBtn.addEventListener('click',() => { pressedRight(); } );
+
+playPauseImgBtn.addEventListener('click',() => {
+        
+        if (isCarouselPaused){
+            playPauseImgBtn.src = "/imgs/icons/actions/icn_pause.png";
+            isCarouselPaused = false;
+            interval = setInterval("pressedRight()" , 5000);
+            
+        }else{
+            clearInterval(interval);
+            playPauseImgBtn.src = "/imgs/icons/actions/icn_play.png";
+            isCarouselPaused = true;
+        }
     }
 );
