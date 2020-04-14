@@ -1,9 +1,23 @@
 .main_paragraph {
-    font-size: 18px;
-  text-align: justify;
+    position: relative;
+    font-size: 20px;
+    text-align: justify;
     background: rgba(0, 0, 0, 0.01);
     color: white;
-    transform: rotate(0.001deg);
     margin: 0;
     padding: 1em 2em 1em 2em;
+}
+
+@media (max-width: 480px){
+    .main_paragraph {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+      .main_paragraph {
+        font-size: 15px;
+    }
+  //CSS
+  
 }

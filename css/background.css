@@ -96,3 +96,25 @@
 .grid_btn_right:hover {
     opacity: .8;
 }
+
+@media (max-width: 480px){
+    .grid_btn_left{ display: none; }
+    .grid_btn_left_arrow { display: none; }   
+    .grid_btn_right{ display: none; }
+    .grid_btn_right_arrow { display: none; }   
+    
+    .grid_img_center  { 
+        grid-column: 1/7;
+        grid-row: 1/11;
+        padding: 0 1em 0 1em;
+    } 
+    
+    .grid_img_center img { 
+        border-radius: 1%;
+    } 
+    
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+
+}
