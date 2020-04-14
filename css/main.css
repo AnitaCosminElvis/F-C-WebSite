@@ -13,7 +13,7 @@ body{
     display: grid;
     background-color: black;
     grid-template-columns: 15% repeat(7, 10%) 15%;
-    grid-template-rows: 25vh auto 2em 4em;
+    grid-template-rows: 15em auto 2em 4em;
 }
 
 .grid_menu { 
@@ -80,7 +80,7 @@ body{
 @media (max-width: 480px){
     
     .main_grid{
-        grid-template-rows: 15vh auto 2em 4em;
+        grid-template-rows: 7em auto 2em 4em;
     }
     
     .slider_back_btn{
@@ -102,7 +102,7 @@ body{
 @media (min-width: 480px) and (max-width: 768px){
   
     .main_grid{
-        grid-template-rows: 17vh auto 2em 4em;
+        grid-template-rows: 11em auto 2em 4em;
     }
     
     .slider_back_btn{
