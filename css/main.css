@@ -13,7 +13,7 @@ body{
     display: grid;
     background-color: black;
     grid-template-columns: 15% repeat(7, 10%) 15%;
-    grid-template-rows: 20% auto 2em 4em;
+    grid-template-rows: 25vh auto 2em 4em;
 }
 
 .grid_menu { 
@@ -77,12 +77,47 @@ body{
     grid-row: 4; 
 }
 
-@media screen and (min-width: 0px) (max-width: 480px){
+@media (max-width: 480px){
+    
+    .main_grid{
+        grid-template-rows: 15vh auto 2em 4em;
+    }
+    
+    .slider_back_btn{
+        width: 1.8em;
+        height: 1.8em;
+    }
 
+    .slider_next_btn{
+        width: 1.8em;
+        height: 1.8em;
+    }
+
+    .slider_play_pause_btn {
+        width: 1.8em;
+        height: 1.8em;
+    }
 }
 
-@media screen and (max-width: 768px) and (min-width: 480px){
+@media (min-width: 480px) and (max-width: 768px){
   
-  //CSS
+    .main_grid{
+        grid-template-rows: 17vh auto 2em 4em;
+    }
+    
+    .slider_back_btn{
+        width: 1.7em;
+        height: 1.7em;
+    }
+
+    .slider_next_btn{
+        width: 1.7em;
+        height: 1.7em;
+    }
+
+    .slider_play_pause_btn {
+        width: 1.7em;
+        height: 1.7em;
+    }
   
 }
