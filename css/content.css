@@ -1,9 +1,9 @@
 .main_paragraph {
-    max-width: 100%;
     font-size: 18px;
+  text-align: justify;
     background: rgba(0, 0, 0, 0.01);
     color: white;
     transform: rotate(0.001deg);
     margin: 0;
-    padding: 0;
+    padding: 1em 2em 1em 2em;
 }
