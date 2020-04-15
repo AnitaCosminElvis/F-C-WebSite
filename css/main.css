@@ -33,7 +33,7 @@ body{
 
 
 .grid_slider_buttons {
-    grid-column: 5;
+    grid-column: 2/10;
     grid-row: 3;
     display:flex;
     width: 80%;
@@ -80,10 +80,12 @@ body{
 @media (max-width: 480px){
     
     .main_grid{
+        grid-template-columns: 20vw repeat(7, 8vw) 20vw;
         grid-template-rows: 7em auto 2em 4em;
     }
     
     .slider_back_btn{
+        background-image: url("/imgs/icons/actions/icn_back_rounded.png") no-repeat 2em 2em;
         width: 1.8em;
         height: 1.8em;
     }

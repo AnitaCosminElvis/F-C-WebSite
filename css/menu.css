@@ -145,6 +145,10 @@
         padding: 0;
     }
     
+    .line_base {
+        border-radius: 25%;
+    }
+    
     .line_top{ grid-column:10/21; grid-row: 1/9; }
     .line_right{ grid-column:18/27;grid-row: 10/22; }
     .line_bottom{ grid-column:14/26;grid-row: 22/31; }

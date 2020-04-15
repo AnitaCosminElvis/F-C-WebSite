@@ -13,5 +13,5 @@ linksBtn.addEventListener('click',() => {
 });
 
 contactsBtn.addEventListener('click',() => {
-    window.location = "/contacts.html";
+    window.location = "/about.html";
 });

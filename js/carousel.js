@@ -29,6 +29,44 @@ var isCarouselPaused = true;
 //global interval
 var interval;
 
+//match mobile media variable
+
+window.addEventListener("resize",() => {
+    let matchMobile = window.matchMedia("(max-width: 480px)");
+
+    if (matchMobile.matches) {
+        leftImgBtn.src = "/imgs/icons/actions/icn_back_rounded.png";
+        if (isCarouselPaused) playPauseImgBtn.src = "/imgs/icons/actions/icn_play_rounded.png";
+        else playPauseImgBtn.src = "/imgs/icons/actions/icn_pause_rounded.png";
+        rightImgBtn.src = "/imgs/icons/actions/icn_next_rounded.png";
+    }else{
+        leftImgBtn.src = "/imgs/icons/actions/icn_back.png";
+        if (isCarouselPaused) playPauseImgBtn.src = "/imgs/icons/actions/icn_play.png";
+        else playPauseImgBtn.src = "/imgs/icons/actions/icn_pause.png";        
+        rightImgBtn.src = "/imgs/icons/actions/icn_next.png";
+    }
+});
+
+leftBtn.addEventListener('click',() => { pressedLeft(); } );
+rightBtn.addEventListener('click',() => { pressedRight(); } );
+leftImgBtn.addEventListener('click',() => { pressedLeft(); } );
+rightImgBtn.addEventListener('click',() => { pressedRight(); } );
+
+playPauseImgBtn.addEventListener('click',() => {
+        
+        if (isCarouselPaused){
+            playPauseImgBtn.src = "/imgs/icons/actions/icn_pause.png";
+            isCarouselPaused = false;
+            interval = setInterval("pressedRight()" , 5000);
+            
+        }else{
+            clearInterval(interval);
+            playPauseImgBtn.src = "/imgs/icons/actions/icn_play.png";
+            isCarouselPaused = true;
+        }
+    }
+);
+
 function prepareCarouselImages(){
     
     leftBtn.classList.add('transparentEffect');
@@ -75,23 +113,3 @@ function pressedRight(){
 
     hasStartedSwipe = false;
 }
-
-leftBtn.addEventListener('click',() => { pressedLeft(); } );
-rightBtn.addEventListener('click',() => { pressedRight(); } );
-leftImgBtn.addEventListener('click',() => { pressedLeft(); } );
-rightImgBtn.addEventListener('click',() => { pressedRight(); } );
-
-playPauseImgBtn.addEventListener('click',() => {
-        
-        if (isCarouselPaused){
-            playPauseImgBtn.src = "/imgs/icons/actions/icn_pause.png";
-            isCarouselPaused = false;
-            interval = setInterval("pressedRight()" , 5000);
-            
-        }else{
-            clearInterval(interval);
-            playPauseImgBtn.src = "/imgs/icons/actions/icn_play.png";
-            isCarouselPaused = true;
-        }
-    }
-);
