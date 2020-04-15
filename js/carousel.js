@@ -29,28 +29,16 @@ var isCarouselPaused = true;
 //global interval
 var interval;
 
-//match mobile media variable
-
-window.addEventListener("resize",() => {
-    let matchMobile = window.matchMedia("(max-width: 480px)");
-
-    if (matchMobile.matches) {
-        leftImgBtn.src = "/imgs/icons/actions/icn_back_rounded.png";
-        if (isCarouselPaused) playPauseImgBtn.src = "/imgs/icons/actions/icn_play_rounded.png";
-        else playPauseImgBtn.src = "/imgs/icons/actions/icn_pause_rounded.png";
-        rightImgBtn.src = "/imgs/icons/actions/icn_next_rounded.png";
-    }else{
-        leftImgBtn.src = "/imgs/icons/actions/icn_back.png";
-        if (isCarouselPaused) playPauseImgBtn.src = "/imgs/icons/actions/icn_play.png";
-        else playPauseImgBtn.src = "/imgs/icons/actions/icn_pause.png";        
-        rightImgBtn.src = "/imgs/icons/actions/icn_next.png";
-    }
-});
-
+window.onload = init();
+window.addEventListener("resize",setRoundedSliderButtonsOnMobile());
 leftBtn.addEventListener('click',() => { pressedLeft(); } );
 rightBtn.addEventListener('click',() => { pressedRight(); } );
 leftImgBtn.addEventListener('click',() => { pressedLeft(); } );
 rightImgBtn.addEventListener('click',() => { pressedRight(); } );
+
+function init(){
+    setRoundedSliderButtonsOnMobile();
+}
 
 playPauseImgBtn.addEventListener('click',() => {
         
@@ -112,4 +100,20 @@ function pressedRight(){
     prepareCarouselImages();
 
     hasStartedSwipe = false;
+}
+
+function setRoundedSliderButtonsOnMobile(){
+    let matchMobile = window.matchMedia("(max-width: 480px)");
+
+    if (matchMobile.matches) {
+        leftImgBtn.src = "/imgs/icons/actions/icn_back_rounded.png";
+        if (isCarouselPaused) playPauseImgBtn.src = "/imgs/icons/actions/icn_play_rounded.png";
+        else playPauseImgBtn.src = "/imgs/icons/actions/icn_pause_rounded.png";
+        rightImgBtn.src = "/imgs/icons/actions/icn_next_rounded.png";
+    }else{
+        leftImgBtn.src = "/imgs/icons/actions/icn_back.png";
+        if (isCarouselPaused) playPauseImgBtn.src = "/imgs/icons/actions/icn_play.png";
+        else playPauseImgBtn.src = "/imgs/icons/actions/icn_pause.png";        
+        rightImgBtn.src = "/imgs/icons/actions/icn_next.png";
+    }
 }
